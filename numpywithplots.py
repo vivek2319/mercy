@@ -9,3 +9,4 @@ plt.xlabel("salary in thousand $")
 plt.ylabel(" per hour rate")
 plt.grid(True, linestyle='-', color='0.75')
 plt.show()
+#Output can be viewed at https://tinyurl.com/y8wknzfr
