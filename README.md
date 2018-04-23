@@ -20,3 +20,13 @@ Example problems are classification and regression.
 
 Example algorithms include Logistic Regression and the Back Propagation Neural Network.
 
+
+# 2. Unsupervised Learning
+
+Unsupervised Learning AlgorithmsInput data is not labeled and does not have a known result.
+
+A model is prepared by deducing structures present in the input data. This may be to extract general rules. It may be through a mathematical process to systematically reduce redundancy, or it may be to organize data by similarity.
+
+Example problems are clustering, dimensionality reduction and association rule learning.
+
+Example algorithms include: the Apriori algorithm and k-Means.
