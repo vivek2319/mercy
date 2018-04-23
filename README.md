@@ -10,3 +10,6 @@ This taxonomy or way of organizing machine learning algorithms is useful because
 
 Let’s take a look at three different learning styles in machine learning algorithms:
 
+# 1. Supervised Learning
+
+Supervised Learning Algorithms: Input data is called training data and has a known label or result such as spam/not-spam or a stock price at a time.
