@@ -36,3 +36,12 @@ Example algorithms include: the Apriori algorithm and k-Means.
 # 3. Semi-Supervised Learning
 
 Semi-supervised Learning AlgorithmsInput data is a mixture of labeled and unlabelled examples.
+
+
+There is a desired prediction problem but the model must learn the structures to organize the data as well as make predictions.
+
+Example problems are classification and regression.
+
+Example algorithms are extensions to other flexible methods that make assumptions about how to model the unlabeled data.
+
+
