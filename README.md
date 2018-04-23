@@ -13,3 +13,6 @@ Let’s take a look at three different learning styles in machine learning algor
 # 1. Supervised Learning
 
 Supervised Learning Algorithms: Input data is called training data and has a known label or result such as spam/not-spam or a stock price at a time.
+
+A model is prepared through a training process in which it is required to make predictions and is corrected when those predictions are wrong. The training process continues until the model achieves a desired level of accuracy on the training data.
+
