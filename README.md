@@ -16,3 +16,7 @@ Supervised Learning Algorithms: Input data is called training data and has a kno
 
 A model is prepared through a training process in which it is required to make predictions and is corrected when those predictions are wrong. The training process continues until the model achieves a desired level of accuracy on the training data.
 
+Example problems are classification and regression.
+
+Example algorithms include Logistic Regression and the Back Propagation Neural Network.
+
