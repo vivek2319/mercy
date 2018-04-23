@@ -30,3 +30,9 @@ A model is prepared by deducing structures present in the input data. This may b
 Example problems are clustering, dimensionality reduction and association rule learning.
 
 Example algorithms include: the Apriori algorithm and k-Means.
+
+
+
+# 3. Semi-Supervised Learning
+
+Semi-supervised Learning AlgorithmsInput data is a mixture of labeled and unlabelled examples.
