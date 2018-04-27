@@ -14,3 +14,12 @@ n <- nrow(finaltrain)
 r  <- rep(1:ceiling(n/chunk),each=chunk)[1:n]
 d <- split(finaltrain,r)
 
+If you are stacking / ensembling then try this 
+
+# shuffle and split the data into three parts
+set.seed(1234)
+finaltrain <- finaltrain[sample(nrow(finaltrain)),]
+split <- floor(nrow(finaltrain)/3)
+ensembleData <- finaltrain[0:split,]
+blenderData <- finaltrain[(split+1):(split*2),]
+testingData <- finaltrain[(split*2+1):nrow(finaltrain),]
