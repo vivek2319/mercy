@@ -1,0 +1,8 @@
+To normalize data in python pandas
+
+from sklearn import preprocessing
+
+x = df.values #returns a numpy array
+min_max_scaler = preprocessing.MinMaxScaler()
+x_scaled = min_max_scaler.fit_transform(x)
+df = pandas.DataFrame(x_scaled)
