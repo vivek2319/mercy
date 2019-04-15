@@ -1,0 +1,11 @@
+#Write the prediction table as staging on HIVE directly, for this purpose we will use spark
+dataframe.write.mode("overwrite").saveAsTable("Table_Name") 
+
+#to append this spark prediction dataframe use this
+dataframe.write.mode("append").insertInto("Table_Name") 
+
+---------------------------------
+To convert a spark dataframe to pandas 
+-----------------------------------
+df=newdf.toPandas() #Here newdf is spark dataframe
+------------------------
