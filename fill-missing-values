@@ -36,3 +36,7 @@ class DataFrameImputer(TransformerMixin):
 
     def transform(self, X, y=None):
         return X.fillna(self.fill)
+-----------
+df_filtered3 = DataFrameImputer().fit_transform(df2)
+df_filtered3.isnull().sum()
+------------
