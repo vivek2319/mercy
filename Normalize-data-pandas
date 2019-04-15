@@ -6,3 +6,34 @@ x = df.values #returns a numpy array
 min_max_scaler = preprocessing.MinMaxScaler()
 x_scaled = min_max_scaler.fit_transform(x)
 df = pandas.DataFrame(x_scaled)
+
+*****************
+or you can do this 
+***************
+def normalize(df):
+    result = df.copy()
+    for feature_name in df.columns:
+        max_value = df[feature_name].max()
+        min_value = df[feature_name].min()
+        result[feature_name] = (df[feature_name] - min_value) / (max_value - min_value)
+    return result
+    
+    
+***************
+or you can do this
+****************
+
+
+If you like using the sklearn package, you can keep the column and index names by using pandas loc like so:
+
+from sklearn.preprocessing import MinMaxScaler
+
+scaler = MinMaxScaler() 
+scaled_values = scaler.fit_transform(df) 
+df.loc[:,:] = scaled_values
+
+************************
+or you can do this
+*********************
+
+normalized_df=(df-df.min())/(df.max()-df.min())
