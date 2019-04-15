@@ -36,4 +36,6 @@ df.loc[:,:] = scaled_values
 or you can do this
 *********************
 
+normalized_df=(df-df.mean())/df.std()
 normalized_df=(df-df.min())/(df.max()-df.min())
+
