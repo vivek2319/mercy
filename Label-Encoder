@@ -1,0 +1,6 @@
+from sklearn.preprocessing import LabelEncoder
+
+df_col = df.columns
+col_non_num = [c for c in df_col if df[c].dtype == 'object']
+for c in col_non_num:
+  df[c] = LabelEncoder().fit_transform(df[c])
