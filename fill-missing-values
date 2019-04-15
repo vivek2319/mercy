@@ -1,0 +1,11 @@
+# fill with mode, mean, or median
+df_mode, df_mean, df_median = df.mode().iloc[0], df.mean(), df.median()
+
+df_fill_mode = df.fillna(df_mode)
+df_fill_mean = df.fillna(df_mean)
+df_fill_median = df.fillna(df_median)
+
+# drop col with any missing values
+df_drop_na_col = df.dropna(axis=1)
+
+
