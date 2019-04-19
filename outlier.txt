@@ -1,0 +1,5 @@
+Dealing with Outliers 
+
+x[!x %in% boxplot.stats(x)$out]
+
+Also read this: https://www.r-statistics.com/2011/01/how-to-label-all-the-outliers-in-a-boxplot/
