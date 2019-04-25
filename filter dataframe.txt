@@ -1,3 +1,6 @@
 To filter dataframe with certain column value condition
 
 https://stackoverflow.com/questions/17071871/select-rows-from-a-dataframe-based-on-values-in-a-column-in-pandas
+
+try this too 
+df1 = df[(df.RELEASE != '16.2.1') & (df.RELEASE != '16.3.1') &(df.RELEASE!='16.4.1')&(df.RELEASE!='16.5.1')&(df.RELEASE!='16.6.1')&(df.RELEASE!='16.7.1')&(df.RELEASE!='16.8.1')]
