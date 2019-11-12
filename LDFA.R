@@ -1,7 +1,7 @@
 EDD <- read.csv('http://math.mercyhurst.edu/~sousley/STAT_139/data/EDDat3.csv')
 
 
-
+#R programming 
 library(MASS)
 library(caret)
 library(e1071)
