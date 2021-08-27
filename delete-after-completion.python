@@ -1,0 +1,26 @@
+# We will delete Results and Data Directory
+    #Checking to see if the path exists
+    if os.path.exists('/home/rstudio/Results') and os.path.exists('home/rstudio/Data'):
+        #Checking to see if the dir is not empty
+          if any(os.scandir('/home/rstudio/Results')):
+              logging.info(" Not Empty, ready for deletion ")
+              try:
+                  shutil.rmtree('/home/rstudio/Results')
+                  logging.info(" Results Directory (/home/rstudio/Results) have been successfully deleted! ")
+              except:
+                  logging.info(" Error while deleting Results (/home/rstudio/Results) directory ")
+          else:
+              logging.info(" Directory is empty! ")
+            
+        #Checking to see if the dir is not empty
+          if any(os.scandir('/home/rstudio/Data')):
+              logging.info(" Not Empty, ready for deletion ")
+              try:
+                  shutil.rmtree('home/rstudio/Data')
+                  logging.info("Data Directory (/home/rstudio/Data) have been successfully deleted! ")
+              except:
+                  logging.info(" Error while deleting Data (/home/rstudio/Data) directory ")
+          else:
+              logging.info(" Directory is empty! ")
+    else:
+        logging.info(" Path /home/rstudio/Results and home/rstudio/Data doesn't exist! ")
