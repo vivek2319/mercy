@@ -1,0 +1,17 @@
+Setting up a CI/CD pipeline using Azure Actions in Azure involves several steps. Here is an overview of the process:
+
+Create a new repository or navigate to an existing one in Azure DevOps.
+
+Create a new pipeline by clicking on the "Pipelines" tab in the left-hand menu and then clicking "New pipeline."
+
+Choose the type of code repository you are using (e.g., GitHub, Azure Repos), and then select the repository you want to use.
+
+Choose the type of pipeline you want to create (e.g., YAML, Classic editor).
+
+Configure your pipeline by defining your build and release stages, including any necessary tasks such as building, testing, and deploying your application.
+
+Set up any necessary variables or parameters to ensure your pipeline runs correctly.
+
+Configure your triggers to automatically run your pipeline when changes are made to your code.
+
+Save and run your pipeline to ensure that it is working correctly.
