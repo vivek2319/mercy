@@ -15,3 +15,81 @@ Set up any necessary variables or parameters to ensure your pipeline runs correc
 Configure your triggers to automatically run your pipeline when changes are made to your code.
 
 Save and run your pipeline to ensure that it is working correctly.
+
+
+Do same for Python and Azure Data Factory. How to setup ci cd pipeline?
+
+
+Here's an overview of the process:
+
+Create a new pipeline in Azure Data Factory.
+
+Add a new activity to the pipeline and choose "Custom activity."
+
+In the "Custom activity" settings, specify the command to run your Python script. For example:
+
+Copy code
+python my_etl_script.py
+Create a new Azure Container Registry to store your Docker images.
+
+Build a Docker image of your Python ETL service using a Dockerfile. Here's an example Dockerfile:
+
+bash
+Copy code
+FROM python:3.8
+
+COPY . /app
+WORKDIR /app
+
+RUN pip install -r requirements.txt
+
+CMD ["python", "my_etl_script.py"]
+Push the Docker image to the Azure Container Registry.
+
+Create a new YAML pipeline in Azure DevOps.
+
+In the pipeline, specify the Docker image to use and any necessary environment variables.
+
+Add a step to deploy the Docker image to an Azure Kubernetes Service (AKS) cluster. Here's an example of what this might look like:
+
+yaml
+Copy code
+- stage: deploy
+  displayName: 'Deploy to AKS'
+  jobs:
+  - job: deploy
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: KubernetesManifest@0
+      displayName: 'Deploy to AKS'
+      inputs:
+        action: deploy
+        namespace: my-namespace
+        manifests: |
+          apiVersion: apps/v1
+          kind: Deployment
+          metadata:
+            name: my-etl-service
+          spec:
+            replicas: 1
+            selector:
+              matchLabels:
+                app: my-etl-service
+            template:
+              metadata:
+                labels:
+                  app: my-etl-service
+              spec:
+                containers:
+                - name: my-etl-service
+                  image: myregistry.azurecr.io/my-etl-service:latest
+                  env:
+                  - name: MY_VAR
+                    value: 'my_value'
+Set up a trigger to automatically run the pipeline when changes are made to your code.
+That's it! This should give you a basic idea of how to set up a CI/CD pipeline for Python ETL services using Azure Data Factory. Of course, the specific details will depend on your particular requirements and environment, so you may need to customize this approach accordingly.
+
+
+
+
